@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap");
+:root {
+  --ff-1: 'Montserrat', sans-serif;
+  --ff-2: 'Playfair Display', serif;
+  --clr-black: #000;
+  --clr-white: #fff;
+  --clr-gray: #4F4F4F;
+  --clr-light-gray: #BDBDBD;
+  --clr-pri: #F2994A;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 16px;
+  font-family: var(--ff-1);
+  padding: 2em 10em;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1em 5em;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 1em 2em;
+  }
+}
+
+h1 {
+  font-family: var(--ff-2);
+  font-size: 3em;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
+p.heading_description {
+  font-size: 1em;
+  font-weight: 500;
+  max-width: 60ch;
+  color: var(--clr-gray);
+  font-style: italic;
+  margin: .5em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5em;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+p.heading_description img {
+  width: 3em;
+}
+
+@media (max-width: 768px) {
+  p.heading_description {
+    font-size: 0.8em;
+    max-width: 55ch;
+  }
+}
+
+img.recipe-image {
+  width: 100%;
+  max-width: 50em;
+  margin: 1em 0;
+}
+
+@media (max-width: 768px) {
+  img.recipe-image {
+    border-radius: 10px;
+  }
+}
+
+section.recipe {
+  margin: 2em 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  gap: 2em;
+}
+
+section.recipe .cooking_descp_short {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+  padding: 2.5em 2em;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-right: auto;
+}
+
+section.recipe .cooking_descp_short .UI-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .5em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+section.recipe .cooking_descp_short .UI-1 img {
+  width: 2.5em;
+  height: 2.5em;
+}
+
+section.recipe .cooking_descp_short .UI-1__texts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.recipe .cooking_descp_short .UI-1__texts small {
+  font-size: 0.8em;
+  font-weight: 700;
+  color: var(--clr-light-gray);
+  text-transform: uppercase;
+}
+
+section.recipe .cooking_descp_short .UI-1__texts strong {
+  font-size: 1em;
+  font-size: 500;
+}
+
+section.recipe .cooking_descp_short .UI-1.yields strong {
+  color: var(--clr-pri);
+}
+
+section.recipe .cooking_descp_long {
+  max-width: 55ch;
+  margin-right: auto;
+}
+
+section.recipe .cooking_descp_long h2 {
+  font-family: var(--ff-2);
+  font-weight: 700;
+  margin-top: 1em;
+}
+
+section.recipe .cooking_descp_long h3 {
+  font-family: var(--ff-2);
+  font-weight: 500;
+  font-style: italic;
+  margin: 2em 0;
+}
+
+section.recipe .cooking_descp_long .step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1em;
+  margin: 1em 0;
+}
+
+section.recipe .cooking_descp_long .step .input_wrapper {
+  width: 2em;
+}
+
+section.recipe .cooking_descp_long .step input {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+section.recipe .cooking_descp_long .step p span {
+  font-weight: 800;
+}
+
+section.recipe .cooking_descp_long .step .number_wrapper {
+  font-family: var(--ff-2);
+  font-size: 1.5em;
+  background: var(--clr-pri);
+  color: var(--clr-white);
+  line-height: 1;
+  padding: 0.1em 0.5em 0.3em 0.5em;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  section.recipe {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.recipe .cooking_descp_short {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+    padding: 1em;
+    margin-bottom: 2em;
+  }
+  section.recipe .cooking_descp_short .UI-1.yields {
+    width: 100%;
+    margin-right: auto;
+  }
+  section.recipe .cooking_descp_short .UI-1__texts small {
+    font-size: 0.6em;
+  }
+  section.recipe .cooking_descp_short .UI-1__texts strong {
+    font-size: 0.8em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
